@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.lang.invoke.MethodHandle;
 import java.util.ArrayList;
@@ -35,6 +36,9 @@ public class MainActivity extends AppCompatActivity {
                 call.enqueue(new Callback<Model>() {
                     @Override
                     public void onResponse(Call<Model> call, Response<Model> response) {
+
+                        Toast.makeText(MainActivity.this, " API Called Successfully... ", Toast.LENGTH_SHORT).show();
+
                         Log.e(TAG, "onResponse: code: " +response.code());
 
 
